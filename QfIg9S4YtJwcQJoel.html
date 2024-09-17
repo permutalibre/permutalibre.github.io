@@ -1,0 +1,279 @@
+<html><head><base href="https://wa.me/propiedades">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Propiedades Disponibles - PermutaLibre</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #FFE600;
+      --secondary-color: #3483FA;
+      --text-color: #333333;
+    }
+    
+    body {
+      font-family: 'Proxima Nova', -apple-system, 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+      color: var(--text-color);
+      background-color: #f8f9fa;
+    }
+    
+    .navbar {
+      background-color: var(--primary-color);
+    }
+    
+    .property-card {
+      transition: transform 0.3s ease-in-out;
+      cursor: pointer;
+    }
+    
+    .property-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    
+    .search-bar {
+      background-color: var(--secondary-color);
+      padding: 20px 0;
+    }
+    
+    .btn-search {
+      background-color: var(--primary-color);
+      color: var(--text-color);
+      font-weight: bold;
+    }
+    
+    .pagination .page-link {
+      color: var(--secondary-color);
+    }
+    
+    .pagination .page-item.active .page-link {
+      background-color: var(--secondary-color);
+      border-color: var(--secondary-color);
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img src="https://permutalibre.com/logo.svg" alt="PermutaLibre Logo" height="30">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="/propiedades">Propiedades</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/como-funciona">Cómo funciona</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/sobre-nosotros">Sobre nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/registrarse">Registrarse</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/iniciar-sesion">Iniciar sesión</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="search-bar">
+    <div class="container">
+      <form class="row g-3">
+        <div class="col-md-3">
+          <input type="text" class="form-control" placeholder="Ubicación">
+        </div>
+        <div class="col-md-3">
+          <select class="form-select">
+            <option selected>Tipo de propiedad</option>
+            <option>Casa</option>
+            <option>Apartamento</option>
+            <option>Oficina</option>
+            <option>Terreno</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <input type="number" class="form-control" placeholder="Precio mínimo">
+        </div>
+        <div class="col-md-2">
+          <input type="number" class="form-control" placeholder="Precio máximo">
+        </div>
+        <div class="col-md-2">
+          <button type="submit" class="btn btn-search w-100">Buscar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="container my-5">
+    <h1 class="mb-4">Propiedades Disponibles para Permuta</h1>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-100 property-card">
+          <img src="https://via.placeholder.com/300x200.png?text=Casa+en+Bogotá" class="card-img-top" alt="Casa en Bogotá">
+          <div class="card-body">
+            <h5 class="card-title">Casa en Bogotá</h5>
+            <p class="card-text">Hermosa casa de 3 habitaciones en el norte de Bogotá.</p>
+            <p class="text-primary fw-bold">$500,000,000 COP</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Publicado hace 2 días</small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 property-card">
+          <img src="https://via.placeholder.com/300x200.png?text=Apartamento+en+Medellín" class="card-img-top" alt="Apartamento en Medellín">
+          <div class="card-body">
+            <h5 class="card-title">Apartamento en Medellín</h5>
+            <p class="card-text">Moderno apartamento de 2 habitaciones en El Poblado.</p>
+            <p class="text-primary fw-bold">$400,000,000 COP</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Publicado hace 1 semana</small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 property-card">
+          <img src="https://via.placeholder.com/300x200.png?text=Finca+en+Eje+Cafetero" class="card-img-top" alt="Finca en Eje Cafetero">
+          <div class="card-body">
+            <h5 class="card-title">Finca en Eje Cafetero</h5>
+            <p class="card-text">Encantadora finca cafetera con vista panorámica.</p>
+            <p class="text-primary fw-bold">$750,000,000 COP</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Publicado hace 3 días</small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 property-card">
+          <img src="https://via.placeholder.com/300x200.png?text=Oficina+en+Cali" class="card-img-top" alt="Oficina en Cali">
+          <div class="card-body">
+            <h5 class="card-title">Oficina en Cali</h5>
+            <p class="card-text">Espaciosa oficina en el centro empresarial de Cali.</p>
+            <p class="text-primary fw-bold">$350,000,000 COP</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Publicado hace 5 días</small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 property-card">
+          <img src="https://via.placeholder.com/300x200.png?text=Lote+en+Cartagena" class="card-img-top" alt="Lote en Cartagena">
+          <div class="card-body">
+            <h5 class="card-title">Lote en Cartagena</h5>
+            <p class="card-text">Terreno con vista al mar en zona exclusiva de Cartagena.</p>
+            <p class="text-primary fw-bold">$1,200,000,000 COP</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Publicado hace 1 día</small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 property-card">
+          <img src="https://via.placeholder.com/300x200.png?text=Casa+campestre+en+Villa+de+Leyva" class="card-img-top" alt="Casa campestre en Villa de Leyva">
+          <div class="card-body">
+            <h5 class="card-title">Casa campestre en Villa de Leyva</h5>
+            <p class="card-text">Acogedora casa de campo con amplio jardín y piscina.</p>
+            <p class="text-primary fw-bold">$600,000,000 COP</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Publicado hace 4 días</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav aria-label="Navegación de páginas" class="mt-5">
+      <ul class="pagination justify-content-center">
+        <li class="page-item disabled">
+          <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+        </li>
+        <li class="page-item active" aria-current="page">
+          <a class="page-link" href="#">1</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Siguiente</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">¿Por qué elegir PermutaLibre?</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-exchange-alt fa-3x mb-3 text-primary"></i>
+              <h5 class="card-title">Intercambios flexibles</h5>
+              <p class="card-text">Encuentra la propiedad perfecta y negocia un intercambio que se ajuste a tus necesidades.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-shield-alt fa-3x mb-3 text-primary"></i>
+              <h5 class="card-title">Transacciones seguras</h5>
+              <p class="card-text">Nuestro equipo de expertos garantiza que todas las transacciones sean seguras y transparentes.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-users fa-3x mb-3 text-primary"></i>
+              <h5 class="card-title">Comunidad activa</h5>
+              <p class="card-text">Únete a nuestra creciente comunidad de propietarios interesados en el intercambio de propiedades.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-light py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>PermutaLibre</h5>
+          <p>La plataforma líder en intercambio de propiedades en Colombia</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Enlaces rápidos</h5>
+          <ul class="list-unstyled">
+            <li><a href="/como-funciona" class="text-light">Cómo funciona</a></li>
+            <li><a href="/terminos-y-condiciones" class="text-light">Términos y condiciones</a></li>
+            <li><a href="/politica-de-privacidad" class="text-light">Política de privacidad</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Síguenos</h5>
+          <div class="social-icons">
+            <a href="https://facebook.com/permutalibre" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://instagram.com/permutalibre" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/permutalibre" target="_blank"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="mt-4 mb-3">
+      <p class="text-center mb-0">© 2023 PermutaLibre. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body></html>
